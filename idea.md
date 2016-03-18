@@ -16,7 +16,11 @@
 ### necomimi
 
 どんなデータが取れるのか  
+
+#### 参考
 http://www.kako.com/neta/2013-019/2013-019.html  
+
+http://sp.ch.nicovideo.jp/wolf64m/blomaga/ar411158  
 
 電源だとノイズが酷いので電池、Bluetoothで通信
 
@@ -37,5 +41,7 @@ Slackで集中し過ぎを通知
 
 # プランB
 
-### 
+猫耳が上手く使えないとき  
+
+## せっかくなのでセンサー類の活用
 
