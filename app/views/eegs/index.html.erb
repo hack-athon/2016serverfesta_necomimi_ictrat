@@ -1,29 +1,324 @@
-<h1>脳波リスト</h1>
-<table border="1">
-  <tr>
-    <th>delta</th>
-    <th>theta</th>
-    <th>lowalpha</th>
-    <th>highalpha</th>
-    <th>lowbeta</th>
-    <th>highbeta</th>
-    <th>lowgamma</th>
-    <th>midgamma</th>
-    <th>attention</th>
-    <th>meditation</th>
-  </tr>
-<% @datas.each do |data| %>
-<tr>
-    <td><%= data.delta %></td>
-    <td><%= data.theta %></td>
-    <td><%= data.lowalpha %></td>
-    <td><%= data.highalpha %></td>
-    <td><%= data.lowbeta %></td>
-    <td><%= data.highbeta %></td>
-    <td><%= data.lowgamma %></td>
-    <td><%= data.midgamma %></td>
-    <td><%= data.attention %></td>
-    <td><%= data.meditation %></td>
-</tr>
-<% end %>
-</table>
+<!DOCTYPE html>
+<html lang="jp">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes designed by 365bootstrap.com"
+    />
+    <meta name="author" content="www.365bootstrap.com" />
+    <title>
+      EEG健康測定
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"
+    />
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js">
+
+    </script>
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://
+    -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js">
+
+      </script>
+      <script src="js/respond.min.js">
+
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- /////////////////////////////////////////Top -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+
+            <div id="logo">EEG健康測定</div>
+          </div>
+          <div class="col-md-6 text-right">
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header -->
+    <!-- /////////////////////////////////////////Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+
+
+
+  				健康状態を測定しましょう!
+
+
+
+				</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="page-scroll" href="index.html">ホーム</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="">使い方</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="service.html">測定</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="archive.html">測定一覧</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="slide">
+      <div class="container">
+        <div class="row">
+          <!-- Carousel -->
+          <div id="carousel-example-generic" class="carousel slide box-shadow" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+              </li>
+              <li data-target="#carousel-example-generic" data-slide-to="1">
+              </li>
+              <li data-target="#carousel-example-generic" data-slide-to="2">
+              </li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="images/1.jpg" alt="First slide">
+                <!-- Static Header -->
+              </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+
+
+
+						<span class="glyphicon glyphicon-chevron-left"></span>
+
+
+
+					</a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+
+
+
+						<span class="glyphicon glyphicon-chevron-right"></span>
+
+
+
+					</a>
+          </div>
+          <!-- /carousel -->
+        </div>
+      </div>
+    </div>
+    <a id="backTop">Back To Top</a>
+    <!-- /Back To Top -->
+    <!-- /////////////////////////////////////////Content -->
+    <div id="page-content" class="index-page">
+      <!-- ////////////Content Box 01 -->
+      <div id="services">
+      </div>
+      <section class="box-content container box-1">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="service">
+              <a href="#"><img src="images/icon1.png" title="icon-name"></a>
+              <h3>
+                脳波って何？
+              </h3>
+              <p>
+                　脳波は無数の神経細胞の集まりです。神経細胞は細胞同士で連絡を取り合う際に微弱な電気信号を発します。 これこそが脳波の正体です。
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="service">
+              <a href="#"><img src="images/icon3.png" title="icon-name"></a>
+              <h3>
+                　脳波の種類
+              </h3>
+              <p>
+                　脳波には大きく分けて５種類の波があります。周波数の高いほうから、ガンマ波、ベータ波、アルファ波、 シータ波、デルタ波です。周波数が高いほど脳が興奮状態であり、周波数が低いほど脳がリラックスしてます。
+                　
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="service">
+              <a href="#"><img src="images/icon2.png" title="icon-name"></a>
+              <h3>
+                制作物で何ができるの？
+              </h3>
+              <p>
+                　この制作物は簡単な脳の状態を測ることができます。またその計測情報をネット上にアップし、mythingsの アプリケーションから通知を行ったり、このサイト上で確認することができます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ////////////Content Box 02 -->
+      <section class="box-content box-2 container box-style-1 box-shadow">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              制作物を実際につけて測定してみよう！
+            </h3>
+            <p>
+              怒った時やイライラした時、不安を抱えた時など精神的に不安定な状態自らの健康にも大きく関わってきます。 自分の脳の状態を確認して、脳がリラックスするように自分に働きかけてみましょう
+            </p>
+            <a class="btn btn-lg btn-blue box-shadow" href="#">測定はこちら！</a>
+          </div>
+        </div>
+      </section>
+      <!-- ////////////Content Box 03 -->
+      <% @datas.each do |data| %>
+      <section class="box-content container box-3 box-shadow">
+        <div class="row">
+          <div class="skill-inner">
+            <h3 class="tittle">
+              脳波
+            </h3>
+            <div class="skills-top">
+              <h5>
+                深い眠りの状態(delta)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:<%= data.delta %>%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            リラックスしている状態(theta)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            とても集中している状態(lowalpha)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            lowAlphaほどではないが，集中している状態(highalpha)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            日常生活(lowbeta)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            やや緊張している状態(highbeta)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            やや興奮状態(lowgamma)</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            midgamma</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            attention</h5>
+            <div class="skills">
+            <div class="skill1" style="width:55%">
+            </div>
+            </div>
+            </div>
+            <div class="skills-top">
+            <h5>
+            meditation</h5>
+              <div class="skills">
+                <div class="skill1" style="width:60%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <% end %>
+    </div>
+    <div class="coppy-right">
+      <div class="wrap-footer">
+        <div class="clearfix">
+          <div class="col-md-6 col-md-offset-3">
+            <p>
+              Copyright @ HealthCare -
+              <a href="http://www.365bootstrap.com" target="_blank" rel="nofollow">Bootstrap Themes</a>
+              Designed by 365Bootstrap.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <!-- Core JavaScript Files -->
+    <script src="js/bootstrap.min.js" >
+    </script>
+    <script src="js/jquery.backTop.min.js" >
+    </script>
+    <script >
+      $(document).ready( function() { $('#backTop').backTop({ 'position' : 1200,
+      'speed' : 500, 'color' : 'red', }); });
+    </script>
+    <!-- carousel -->
+    <script src="owl-carousel/owl.carousel.js" >
+    </script>
+    <script >
+      $(document).ready(function() { $("#owl-brand").owlCarousel({ autoPlay:
+      3000, items : 1, itemsDesktop : [1199,1], itemsDesktopSmall : [979,2],
+      navigation: false, }); });
+    </script>
+  </body>
+
+</html>
