@@ -1,0 +1,29 @@
+<h1>脳波リスト</h1>
+<table border="1">
+  <tr>
+    <th>delta</th>
+    <th>theta</th>
+    <th>lowalpha</th>
+    <th>highalpha</th>
+    <th>lowbeta</th>
+    <th>highbeta</th>
+    <th>lowgamma</th>
+    <th>midgamma</th>
+    <th>attention</th>
+    <th>meditation</th>
+  </tr>
+<% @datas.each do |data| %>
+<tr>
+    <td><%= data.delta %></td>
+    <td><%= data.theta %></td>
+    <td><%= data.lowalpha %></td>
+    <td><%= data.highalpha %></td>
+    <td><%= data.lowbeta %></td>
+    <td><%= data.highbeta %></td>
+    <td><%= data.lowgamma %></td>
+    <td><%= data.midgamma %></td>
+    <td><%= data.attention %></td>
+    <td><%= data.meditation %></td>
+</tr>
+<% end %>
+</table>

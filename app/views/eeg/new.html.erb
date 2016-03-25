@@ -1,0 +1,29 @@
+<h1>脳波リスト</h1>
+<table border="1">
+  <tr>
+    <th>delta</th>
+    <th>theta</th>
+    <th>lowalpha</th>
+    <th>highalpha</th>
+    <th>lowbeta</th>
+    <th>highbeta</th>
+    <th>lowgamma</th>
+    <th>midgamma</th>
+    <th>attention</th>
+    <th>meditation</th>
+  </tr>
+  <% @eeg.each.with_index(1) do |set, i| %>
+  <tr>
+    <td><%= set.delta %></td>
+    <td><%= set.theta %></td>
+    <td><%= set.lowalpha %></td>
+    <td><%= set.highalpha %></td>
+    <td><%= set.lowbeta %></td>
+    <td><%= set.highbeta %></td>
+    <td><%= set.lowgamma %></td>
+    <td><%= set.midgamma %></td>
+    <td><%= set.attention %></td>
+    <td><%= set.meditation %></td>
+  </tr>
+  <% end %>
+</table>

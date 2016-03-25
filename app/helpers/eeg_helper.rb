@@ -1,0 +1,2 @@
+module EegHelper
+end
