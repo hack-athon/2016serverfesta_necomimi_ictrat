@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'eegs/index' => 'eegs#index'
+  get '/eegs/show' => 'eegs#show'
+
+  get '/eegs/index' => 'eegs#index'
 
   get '/eeg' => 'eeg#list'
   root 'home#index'

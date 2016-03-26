@@ -8,4 +8,8 @@ class EegsController < ApplicationController
     @datas.destroy_all
     redirect_to eegs_index_path
   end
+  def show
+    @title = "EEG健康測定"
+    @datas = Eeg.all
+  end
 end

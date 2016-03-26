@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="jp">
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes designed by 365bootstrap.com"
+    />
+    <meta name="author" content="www.365bootstrap.com" />
+    <title>
+      EEG健康測定
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js">
+                
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+                
+    </script>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"
+    />
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    </script>
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://
+    -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js">
+                              
+      </script>
+      <script src="js/respond.min.js">
+                              
+      </script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <!-- /////////////////////////////////////////Top -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="logo">
+              EEG健康測定
+            </div>
+          </div>
+          <div class="col-md-6 text-right">
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header -->
+    <!-- /////////////////////////////////////////Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+
+
+
+    			健康状態を測定しましょう!
+
+
+
+				</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="page-scroll" href="index.html">ホーム</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="">使い方</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="service.html">測定</a>
+            </li>
+            <li>
+              <%= link_to "削除", destroy_eegs_path, method: "delete", class: "page-scroll",
+              "data-confirm" =>  "本当に削除しますか？" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <a id="backTop">Back To Top</a>
+    <!-- /Back To Top -->
+    <!-- /////////////////////////////////////////Content -->
+    <div id="page-content" class="index-page">
+      <!-- ////////////Content Box 01 -->
+      <div id="services">
+      </div>
+      <section class="box-content container box-1">
+      </section>
+      <!-- ////////////Content Box 02 -->
+      <section class="box-content box-2 container box-style-1 box-shadow">
+      </section>
+      <!-- ////////////Content Box 03 -->
+      <% @datas.each do |data| %>
+      <section class="box-content container box-3 box-shadow">
+        <div class="row">
+          <div class="skill-inner">
+            <h3 class="tittle">
+              脳波
+            </h3>
+            <div class="skills-top">
+              <h5>
+                深い眠りの状態(delta)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:<%= data.delta %>%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                リラックスしている状態(theta)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                とても集中している状態(lowalpha)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                lowAlphaほどではないが，集中している状態(highalpha)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                日常生活(lowbeta)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                やや緊張している状態(highbeta)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                やや興奮状態(lowgamma)
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                midgamma
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                attention
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:55%">
+                </div>
+              </div>
+            </div>
+            <div class="skills-top">
+              <h5>
+                meditation
+              </h5>
+              <div class="skills">
+                <div class="skill1" style="width:60%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <% end %>
+    </div>
+    <div class="coppy-right">
+      <div class="wrap-footer">
+        <div class="clearfix">
+          <div class="col-md-6 col-md-offset-3">
+            <p>
+              Copyright @ HealthCare -
+              <a href="http://www.365bootstrap.com" target="_blank" rel="nofollow">Bootstrap Themes</a>
+              Designed by 365Bootstrap.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <!-- Core JavaScript Files -->
+    <script src="js/bootstrap.min.js">
+    </script>
+    <script src="js/jquery.backTop.min.js">
+    </script>
+    <script>
+      $(document).ready( function() { $('#backTop').backTop({ 'position' : 1200,
+      'speed' : 500, 'color' : 'red', }); });
+    </script>
+    <!-- carousel -->
+    <script src="owl-carousel/owl.carousel.js">
+    </script>
+    <script>
+      $(document).ready(function() { $("#owl-brand").owlCarousel({ autoPlay:
+      3000, items : 1, itemsDesktop : [1199,1], itemsDesktopSmall : [979,2],
+      navigation: false, }); });
+    </script>
+  </body>
+
+</html>
