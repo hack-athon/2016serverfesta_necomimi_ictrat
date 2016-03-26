@@ -22,11 +22,11 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         cur = db.cursor()
         cur_a = db.execute("SELECT * FROM sqlite_master WHERE type='table' and name='eggdata'")
         if cur_a.fetchone() == None:
-            cur.execute("create table eggdata(date text,delta integer,theta integer,lowalpha integer,highalpha integer,lowbeta integer,highbeta integer,lowgamma integer,midgamma integer,meditation integer,attention integer)")
+            cur.execute("create table eggdata(year integer,mon integer,day integer,hour integer,min integer,sec integer,delta integer,theta integer,lowalpha integer,highalpha integer,lowbeta integer,highbeta integer,lowgamma integer,midgamma integer,meditation integer,attention integer)")
 
         db.commit()
 
-        cur.execute("insert into eggdata values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (json_data['date'],json_data['delta'],json_data['theta'],json_data['lowalpha'],json_data['highalpha'],json_data['lowbeta'],json_data['highbeta'],json_data['lowgamma'],json_data['midgamma'],json_data['meditation'],json_data['attention'],))
+        cur.execute("insert into eggdata values (?,?,?,?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (json_data['year'],json_data['mon'],json_data['day'],json_data['hour'],json_data['min'],json_data['sec'],json_data['delta'],json_data['theta'],json_data['lowalpha'],json_data['highalpha'],json_data['lowbeta'],json_data['highbeta'],json_data['lowgamma'],json_data['midgamma'],json_data['meditation'],json_data['attention'],))
 
         cur.execute("select * from eggdata")
         for row in cur:
