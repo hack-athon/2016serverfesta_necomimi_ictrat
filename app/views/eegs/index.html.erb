@@ -86,8 +86,8 @@
               <a class="page-scroll" href="service.html">測定</a>
             </li>
             <li>
-              <%= link_to "削除", 送信先, method: "method", class: "page-scroll", "data-confirm" => "本当に削除しますか？" %>
-            </li>
+<%= link_to "削除", destroy_eegs_path, method: "delete", class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>            
+</li>
           </ul>
         </div>
       </div>
