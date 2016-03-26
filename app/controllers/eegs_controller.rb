@@ -1,11 +1,11 @@
 class EegsController < ApplicationController
   def index
-    @title = "Model Example"
+    @title = "EEG健康測定"
     @datas = Eeg.all
   end
   def destroy
     @datas = Eeg.all
-    @datas.destroy
+    @datas.destroy_all
     redirect_to eegs_index_path
   end
 end
