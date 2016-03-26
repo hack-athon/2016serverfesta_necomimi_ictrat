@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'eegs/index'
+  get 'eegs/index' => 'eegs#index'
 
   get '/eeg' => 'eeg#list'
   root 'home#index'
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'auth/signout' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  delete '/eegs/index' => 'eegs#destroy', as: 'destroy_eegs'
+  delete '/eegs/index' => 'eegs#destroy', as: 'destroy_eegs' 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
